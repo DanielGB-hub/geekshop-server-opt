@@ -5,7 +5,37 @@ from django.urls import reverse
 from authapp.forms import UserLoginForm, UserRegisterForm, UserProfileForm
 from basketapp.models import Basket
 
+from django.conf import settings
+from django.core.mail import send_mail
 
+from authapp.models import User
+from basketapp.models import Basket
+
+def send_verify_email(user):
+    verify_link = reverse('auth:verify', args=[user.email, user.activation_key])
+
+    subject = f'Подтверждение учетной записи {user.username}'
+
+    message = f'Для подтверждения регистрации пройдите по ссылке: {settings.DOMAIN}{verify_link}'
+
+    return send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email], fail_silently=False)
+
+
+def verify(request, email, activation_key):
+    try:
+        user = User.objects.get(email=email)
+        if user.activation_key == activation_key and not user.is_activation_key_expired():
+            user.is_active = True
+            user.activation_key = None
+            user.save()
+            auth.login(request, user)
+            return render(request, 'authapp/verification.html')
+        else:
+            print(f'error activation user: {user}')
+            return render(request, 'authapp/verification.html')
+    except Exception as e:
+        print(f'error activation user : {e.args}')
+        return HttpResponseRedirect(reverse('main'))
 
 def login(request):
     if request.method == 'POST':
@@ -37,7 +67,12 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(data=request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            if send_verify_email(user):
+                print('Success')
+            else:
+                print('failed')
+
             messages.success(request, 'Вы успешно зарегистрировались!')
             return HttpResponseRedirect(reverse('auth:login'))
     else:
@@ -66,8 +101,6 @@ def profile(request):
 
         'form': form,
 
-        'baskets': baskets,
+        #'baskets': baskets,
     }
     return render(request, 'authapp/profile.html', context)
-
-

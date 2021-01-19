@@ -1,8 +1,12 @@
+import hashlib
+from random import random
+
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django.core.exceptions import ValidationError
 from authapp.models import User
 from django import forms
 
+#messages.add_message(request, messages.INFO, 'Перед авторизацией зайдите в указанный при регистрации почтовый ящик и подтвердите регистрацию, пройдя по ссылке')
 
 class UserLoginForm(AuthenticationForm):
 
@@ -41,6 +45,18 @@ class UserRegisterForm(UserCreationForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control py-4'
             field.help_text = ''
+
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+
+        user.is_active = False
+        salt = hashlib.sha1(str(random()).encode('utf8')).hexdigest()[:6]
+        user.activation_key = hashlib.sha1((user.email + salt).encode('utf8')).hexdigest()
+        if commit:
+            user.save()
+
+        return user
 
 class UserProfileForm(UserChangeForm):
     avatar = forms.ImageField(widget=forms.FileInput())
