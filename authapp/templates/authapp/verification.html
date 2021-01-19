@@ -1,0 +1,19 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="alert {% if user %}alert-success{% else %}alert-warning {% endif %} alert-dismissible fade show"
+         role="alert"
+         style="margin-top: 50px;">
+        {% if user %}
+            <p>Поздравляем, {{ user.username }}, вы активировали учетную запись!</p>
+            <a href="{% url 'main' %}"> На главную</a>
+        {% else %}
+            <p>Действие ссылки активации просрочено или вы уже активировали учетную запись.</p>
+            <a href="{% url 'main' %}"> На главную</a>
+        {% endif %}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endblock %}

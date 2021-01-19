@@ -13,6 +13,7 @@ urlpatterns = [
     path('register/', authapp_views.register, name='register'),
     path('profile/', authapp_views.profile, name='profile'),
     #path('auth/', include('mainapp.urls', ))
+    path('verify/<email>/<activation_key>', authapp_views.verify, name='verify')
 
 ]
 
