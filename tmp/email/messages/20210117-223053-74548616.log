@@ -1,0 +1,15 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IEtlbjE3?=
+From: django@geekbrains.local
+To: ken17@dg.local
+Date: Sun, 17 Jan 2021 19:30:53 -0000
+Message-ID: 
+ =?utf-8?b?PDE2MTA5MTE4NTM0My41MDQuMTU1MjUzOTc4Nzc4NDgzODk5MjVAS3NlbmlhLdCf?=
+ =?utf-8?b?0Jo+?=
+
+Для подтверждения регистрации пройдите по ссылке: http://localhost:8000/auth/verify/ken17@dg.local/a86df480eee901e827b48b11b24857f5a04dfdaf
+-------------------------------------------------------------------------------
