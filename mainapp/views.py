@@ -1,7 +1,7 @@
 import datetime, random, os, json
 from django.shortcuts import render, get_object_or_404
 from mainapp.models import ProductCategory, Product
-from basketapp.models import Basket
+#from basketapp.models import Basket
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
