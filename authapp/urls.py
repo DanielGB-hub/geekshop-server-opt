@@ -1,18 +1,13 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from django.urls import path
 
-from authapp import views as authapp_views
+import authapp.views as authapp
 
 app_name = 'authapp'
 
 urlpatterns = [
-    path('login/', authapp_views.login, name='login'),
-    path('logout', authapp_views.logout, name='logout'),
-    path('register/', authapp_views.register, name='register'),
-    path('profile/', authapp_views.profile, name='profile'),
-    #path('auth/', include('mainapp.urls', ))
-
+    path('login/', authapp.login, name='login'),
+    path('logout/', authapp.logout, name='logout'),
+    path('register/', authapp.register, name='register'),
+    path('edit/', authapp.edit, name='edit'),
+    path('verify/<email>/<activation_key>', authapp.verify, name='verify'),
 ]
-
