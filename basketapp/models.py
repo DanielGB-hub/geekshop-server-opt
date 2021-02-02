@@ -1,26 +1,72 @@
 from django.db import models
-from authapp.models import User
-
+from django.conf import settings
 from mainapp.models import Product
+
+#class BasketQuerySet(models.QuerySet): // первый метод
+
+    #def delete(self, *args, **kwargs):
+        #for object in self:
+            #object.product.quantity += object.quantity
+            #object.product.save()
+
+        #super().delete()
 
 
 class Basket(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(default=0)
-    created_timestamp = models.DateTimeField(auto_now_add=True)
+    #object = BasketQuerySet.as_manager() // первый метод
 
-    def __str__(self):
-        return f'Корзина для {self.user.username} | Продукт {self.product.name}'
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='basket') #
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='продукт')
+    quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
+    add_datetime = models.DateTimeField(verbose_name='время добавления', auto_now_add=True)
+    
+    
+    def _get_product_cost(self):
+        "return cost of all products this type"
+        return self.product.price * self.quantity
+    
+    product_cost = property(_get_product_cost)
+    
+    
+    def _get_total_quantity(self):
+        "return total quantity for user"
+        _items = Basket.objects.filter(user=self.user)
+        _totalquantity = sum(list(map(lambda x: x.quantity, _items)))
+        return _totalquantity
+        
+    total_quantity = property(_get_total_quantity)
+    
+    
+    def _get_total_cost(self):
+        "return total cost for user"
+        _items = Basket.objects.filter(user=self.user)
+        _totalcost = sum(list(map(lambda x: x.product_cost, _items)))
+        return _totalcost
 
-    def sum(self):
-        return self.quantity * self.product.price
 
-    def total_quantity(self):
-        baskets = Basket.objects.filter(user=self.user)
-        return sum(basket.quantity for basket in baskets)
 
-    def total_sum(self):
-        baskets = Basket.objects.filter(user=self.user)
-        return sum(basket.sum() for basket in baskets)
+    #@staticmethod
+    #def get_items(user):
+        #return Basket.object.filter(user=user).order_by('product__category')
 
+
+    #@staticmethod
+    #def get_product(user, product):
+        #return Basket.object.filter(user=user, product=product)
+
+
+    #@classmethod
+    #def get_products_quantity(cls, user):
+        #basket_items = cls.get_items(user)
+        #basket_items_dic = {}
+        #[basket_items_dic.update({item.product: item.quantity}) for item in basket_items]
+
+        #return basket_items_dic
+
+    #total_cost = property(_get_total_cost)
+
+    #def delete(self): # первый метод
+        #self.product.quantity += self.quantity
+        #self.product.save()
+        #super().delete()
+        #52:17
