@@ -1,6 +1,5 @@
-.idea
-db.sqlite3
-geekshop/vk.json
- __pycache__/
-/media/
+#.idea
+#db.sqlite3
+#geekshop/vk.json
+__pycache__/
 tmp/
