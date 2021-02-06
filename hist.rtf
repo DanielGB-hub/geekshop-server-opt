@@ -1,0 +1,771 @@
+{\rtf1\ansi\ansicpg1251\deff0\deflang1049{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang1033\b\f0\fs40 ip: 80.78.247.162\b0\fs22\par
+login as: root\par
+Authenticating with public key "rsa-key-20210205"\par
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-65-generic x86_64)\par
+\par
+ * Documentation:  {\field{\*\fldinst{HYPERLINK "https://help.ubuntu.com"}}{\fldrslt{\ul\cf1 https://help.ubuntu.com}}}\f0\fs22\par
+ * Management:     {\field{\*\fldinst{HYPERLINK "https://landscape.canonical.com"}}{\fldrslt{\ul\cf1 https://landscape.canonical.com}}}\f0\fs22\par
+ * Support:        {\field{\*\fldinst{HYPERLINK "https://ubuntu.com/advantage"}}{\fldrslt{\ul\cf1 https://ubuntu.com/advantage}}}\f0\fs22\par
+Last login: Fri Feb  5 21:51:41 2021 from 178.140.82.46\par
+root@80-78-247-162:~# ssh-keygen\par
+Generating public/private rsa key pair.\par
+Enter file in which to save the key (/root/.ssh/id_rsa):\par
+Enter passphrase (empty for no passphrase):\par
+Enter same passphrase again:\par
+Your identification has been saved in /root/.ssh/id_rsa\par
+Your public key has been saved in /root/.ssh/id_rsa.pub\par
+The key fingerprint is:\par
+SHA256:8VdLo7Gf5PTbpbJ9/IMgHcLSSQd9Pk0m3p3OY58xEQw root@80-78-247-162.cloudvps.regruhosting.ru\par
+The key's randomart image is:\par
++---[RSA 3072]----+\par
+|         .o  Eo  |\par
+|         . o o = |\par
+|        = o = X +|\par
+|       . B . X B.|\par
+|        S + = B .|\par
+|         . + = X |\par
+|          . . *.O|\par
+|            .o +B|\par
+|            .ooo=|\par
++----[SHA256]-----+\par
+root@80-78-247-162:~# cat /root/.ssh/id_rsa.pub\par
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9VAny1xp8aclHD9plsZwN4Qo75ckQyPgjgrEofPSdAG2CRvPpjldtlscb6z/xw2O5+hlmg0qLthd6PZwHt4KWVN/hEtP0PSFptHxTBtUUONWMK4TbUQTnHjn6xmNKu/shP0wFMoc5djJ7FRE68+EIw3nYbAZy0LngLlUecPpbnWuC3iwoGzK9WhUYdYIOVxrCfxTtTdDxy8uWbdeyLjmUxc26a1fZ2JWVCREycDHoBK6hVC5tlbKGoO79YkY3lakXgiApwMmSPaeP8kCKendXC+Kmm4Z8dLv2JvO+PkAiJzrcnfiAB+rKUEqIl5dj05rL4IWVkf3c0QEOycESNKvT7TRzytq0W4pGTOE3edUo1ANOtKCXv1AsZJ9xDznG/tnIZ+acJCwGrkFucfqQtM5KpbLCkWZ41V89ynIL/KFYMCzjc0qwedstyJoiH8oLPHc/LDAiG6SQQ1Xi38Nzwkl5V2UBP8sqU6IaPKHFuPSRVITuNPPScdwTwUjj4sSzCEc= root@80-78-247-162.cloudvps.regruhosting.ru\par
+root@80-78-247-162:~# apt update\par
+Get:1 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal InRelease [265 kB]\par
+Get:2 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates InRelease [114 kB]\par
+Get:3 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 Packages [1,275 kB]\par
+Get:4 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main i386 Packages [930 kB]\par
+Get:5 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security InRelease [109 kB]\par
+Get:6 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main Translation-en [709 kB]\par
+Get:7 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 c-n-f Metadata [29.5 kB]\par
+Get:8 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe i386 Packages [5,999 kB]\par
+Get:9 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe amd64 Packages [11.3 MB]\par
+Get:10 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe Translation-en [7,220 kB]\par
+Get:11 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe amd64 c-n-f Metadata [265 kB]\par
+Get:12 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main i386 Packages [521 kB]\par
+Get:13 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 Packages [1,007 kB]\par
+Get:14 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main Translation-en [271 kB]\par
+Get:15 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 c-n-f Metadata [11.7 kB]\par
+Get:16 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/universe amd64 Packages [922 kB]\par
+Get:17 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/universe i386 Packages [677 kB]\par
+Get:18 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/universe Translation-en [211 kB]\par
+Get:19 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/universe amd64 c-n-f Metadata [15.5 kB]\par
+Get:20 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/main amd64 Packages [603 kB]\par
+Get:21 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/main i386 Packages [224 kB]\par
+Get:22 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/main Translation-en [149 kB]\par
+Get:23 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/main amd64 c-n-f Metadata [6,164 B]\par
+Get:24 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/universe i386 Packages [519 kB]\par
+Get:25 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/universe amd64 Packages [663 kB]\par
+Get:26 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/universe Translation-en [104 kB]\par
+Get:27 {\field{\*\fldinst{HYPERLINK "http://security.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://security.ubuntu.com/ubuntu}}}\f0\fs22  focal-security/universe amd64 c-n-f Metadata [9,784 B]\par
+Fetched 34.2 MB in 3s (10.2 MB/s)\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+All packages are up to date.\par
+root@80-78-247-162:~# apt install nginx\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+The following additional packages will be installed:\par
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0\par
+  libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter\par
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5\par
+  libwebp6 libxpm4 libxslt1.1 nginx-common nginx-core\par
+Suggested packages:\par
+  libgd-tools fcgiwrap nginx-doc ssl-cert\par
+The following NEW packages will be installed:\par
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0\par
+  libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter\par
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5\par
+  libwebp6 libxpm4 libxslt1.1 nginx nginx-common nginx-core\par
+0 upgraded, 18 newly installed, 0 to remove and 0 not upgraded.\par
+Need to get 2,582 kB of archives.\par
+After this operation, 8,398 kB of additional disk space will be used.\par
+Do you want to continue? [Y/n] Y\par
+Get:1 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]\par
+Get:2 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]\par
+Get:3 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]\par
+Get:4 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.1 [117 kB]\par
+Get:5 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]\par
+Get:6 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libjbig0 amd64 2.1-3.1build1 [26.7 kB]\par
+Get:7 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libwebp6 amd64 0.6.1-2 [185 kB]\par
+Get:8 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libtiff5 amd64 4.1.0+git191117-2build1 [161 kB]\par
+Get:9 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libxpm4 amd64 1:3.5.12-1 [34.0 kB]\par
+Get:10 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2 [118 kB]\par
+Get:11 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1 [37.3 kB]\par
+Get:12 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1 [14.3 kB]\par
+Get:13 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libxslt1.1 amd64 1.1.34-4 [152 kB]\par
+Get:14 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1 [12.6 kB]\par
+Get:15 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1 [42.3 kB]\par
+Get:16 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1 [66.9 kB]\par
+Get:17 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1 [425 kB]\par
+Get:18 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 nginx all 1.18.0-0ubuntu1 [3,624 B]\par
+Fetched 2,582 kB in 0s (19.5 MB/s)\par
+Preconfiguring packages ...\par
+Selecting previously unselected package fonts-dejavu-core.\par
+(Reading database ... 57098 files and directories currently installed.)\par
+Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...\par
+Unpacking fonts-dejavu-core (2.37-1) ...\par
+Selecting previously unselected package fontconfig-config.\par
+Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...\par
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...\par
+Selecting previously unselected package libfontconfig1:amd64.\par
+Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...\par
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...\par
+Selecting previously unselected package libjpeg-turbo8:amd64.\par
+Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64.deb ...\par
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...\par
+Selecting previously unselected package libjpeg8:amd64.\par
+Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...\par
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...\par
+Selecting previously unselected package libjbig0:amd64.\par
+Preparing to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...\par
+Unpacking libjbig0:amd64 (2.1-3.1build1) ...\par
+Selecting previously unselected package libwebp6:amd64.\par
+Preparing to unpack .../06-libwebp6_0.6.1-2_amd64.deb ...\par
+Unpacking libwebp6:amd64 (0.6.1-2) ...\par
+Selecting previously unselected package libtiff5:amd64.\par
+Preparing to unpack .../07-libtiff5_4.1.0+git191117-2build1_amd64.deb ...\par
+Unpacking libtiff5:amd64 (4.1.0+git191117-2build1) ...\par
+Selecting previously unselected package libxpm4:amd64.\par
+Preparing to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...\par
+Unpacking libxpm4:amd64 (1:3.5.12-1) ...\par
+Selecting previously unselected package libgd3:amd64.\par
+Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2_amd64.deb ...\par
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2) ...\par
+Selecting previously unselected package nginx-common.\par
+Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1_all.deb ...\par
+Unpacking nginx-common (1.18.0-0ubuntu1) ...\par
+Selecting previously unselected package libnginx-mod-http-image-filter.\par
+Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1_amd64.deb ...\par
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...\par
+Selecting previously unselected package libxslt1.1:amd64.\par
+Preparing to unpack .../12-libxslt1.1_1.1.34-4_amd64.deb ...\par
+Unpacking libxslt1.1:amd64 (1.1.34-4) ...\par
+Selecting previously unselected package libnginx-mod-http-xslt-filter.\par
+Preparing to unpack .../13-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1_amd64.deb ...\par
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...\par
+Selecting previously unselected package libnginx-mod-mail.\par
+Preparing to unpack .../14-libnginx-mod-mail_1.18.0-0ubuntu1_amd64.deb ...\par
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1) ...\par
+Selecting previously unselected package libnginx-mod-stream.\par
+Preparing to unpack .../15-libnginx-mod-stream_1.18.0-0ubuntu1_amd64.deb ...\par
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1) ...\par
+Selecting previously unselected package nginx-core.\par
+Preparing to unpack .../16-nginx-core_1.18.0-0ubuntu1_amd64.deb ...\par
+Unpacking nginx-core (1.18.0-0ubuntu1) ...\par
+Selecting previously unselected package nginx.\par
+Preparing to unpack .../17-nginx_1.18.0-0ubuntu1_all.deb ...\par
+Unpacking nginx (1.18.0-0ubuntu1) ...\par
+Setting up libxpm4:amd64 (1:3.5.12-1) ...\par
+Setting up nginx-common (1.18.0-0ubuntu1) ...\par
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service \u8594? /lib/systemd/system/nginx.service.\par
+Setting up libjbig0:amd64 (2.1-3.1build1) ...\par
+Setting up libwebp6:amd64 (0.6.1-2) ...\par
+Setting up fonts-dejavu-core (2.37-1) ...\par
+Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...\par
+Setting up libxslt1.1:amd64 (1.1.34-4) ...\par
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...\par
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1) ...\par
+Setting up fontconfig-config (2.13.1-2ubuntu3) ...\par
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1) ...\par
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...\par
+Setting up libtiff5:amd64 (4.1.0+git191117-2build1) ...\par
+Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...\par
+Setting up libgd3:amd64 (2.2.5-5.2ubuntu2) ...\par
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...\par
+Setting up nginx-core (1.18.0-0ubuntu1) ...\par
+Setting up nginx (1.18.0-0ubuntu1) ...\par
+Processing triggers for ufw (0.36-6) ...\par
+Processing triggers for systemd (245.4-4ubuntu3.4) ...\par
+Processing triggers for man-db (2.9.1-1) ...\par
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...\par
+root@80-78-247-162:~# apt install postgresql postgresql-contrib\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+The following additional packages will be installed:\par
+  libllvm10 libpq5 postgresql-12 postgresql-client-12 postgresql-client-common\par
+  postgresql-common ssl-cert\par
+Suggested packages:\par
+  postgresql-doc postgresql-doc-12 libjson-perl openssl-blacklist\par
+Recommended packages:\par
+  sysstat\par
+The following NEW packages will be installed:\par
+  libllvm10 libpq5 postgresql postgresql-12 postgresql-client-12\par
+  postgresql-client-common postgresql-common postgresql-contrib ssl-cert\par
+0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.\par
+Need to get 30.1 MB of archives.\par
+After this operation, 120 MB of additional disk space will be used.\par
+Do you want to continue? [Y/n] Y\par
+Get:1 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 libllvm10 amd64 1:10.0.0-4ubuntu1 [15.3 MB]\par
+Get:2 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 libpq5 amd64 12.5-0ubuntu0.20.04.1 [115 kB]\par
+Get:3 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 postgresql-client-common all 214ubuntu0.1 [28.2 kB]\par
+Get:4 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 postgresql-client-12 amd64 12.5-0ubuntu0.20.04.1 [1,044 kB]\par
+Get:5 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/main amd64 ssl-cert all 1.0.39 [17.0 kB]\par
+Get:6 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 postgresql-common all 214ubuntu0.1 [169 kB]\par
+Get:7 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 postgresql-12 amd64 12.5-0ubuntu0.20.04.1 [13.4 MB]\par
+Get:8 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 postgresql all 12+214ubuntu0.1 [3,924 B]\par
+Get:9 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 postgresql-contrib all 12+214ubuntu0.1 [3,932 B]\par
+Fetched 30.1 MB in 2s (12.2 MB/s)\par
+Preconfiguring packages ...\par
+Selecting previously unselected package libllvm10:amd64.\par
+(Reading database ... 57339 files and directories currently installed.)\par
+Preparing to unpack .../0-libllvm10_1%3a10.0.0-4ubuntu1_amd64.deb ...\par
+Unpacking libllvm10:amd64 (1:10.0.0-4ubuntu1) ...\par
+Selecting previously unselected package libpq5:amd64.\par
+Preparing to unpack .../1-libpq5_12.5-0ubuntu0.20.04.1_amd64.deb ...\par
+Unpacking libpq5:amd64 (12.5-0ubuntu0.20.04.1) ...\par
+Selecting previously unselected package postgresql-client-common.\par
+Preparing to unpack .../2-postgresql-client-common_214ubuntu0.1_all.deb ...\par
+Unpacking postgresql-client-common (214ubuntu0.1) ...\par
+Selecting previously unselected package postgresql-client-12.\par
+Preparing to unpack .../3-postgresql-client-12_12.5-0ubuntu0.20.04.1_amd64.deb ...\par
+Unpacking postgresql-client-12 (12.5-0ubuntu0.20.04.1) ...\par
+Selecting previously unselected package ssl-cert.\par
+Preparing to unpack .../4-ssl-cert_1.0.39_all.deb ...\par
+Unpacking ssl-cert (1.0.39) ...\par
+Selecting previously unselected package postgresql-common.\par
+Preparing to unpack .../5-postgresql-common_214ubuntu0.1_all.deb ...\par
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'\par
+Unpacking postgresql-common (214ubuntu0.1) ...\par
+Selecting previously unselected package postgresql-12.\par
+Preparing to unpack .../6-postgresql-12_12.5-0ubuntu0.20.04.1_amd64.deb ...\par
+Unpacking postgresql-12 (12.5-0ubuntu0.20.04.1) ...\par
+Selecting previously unselected package postgresql.\par
+Preparing to unpack .../7-postgresql_12+214ubuntu0.1_all.deb ...\par
+Unpacking postgresql (12+214ubuntu0.1) ...\par
+Selecting previously unselected package postgresql-contrib.\par
+Preparing to unpack .../8-postgresql-contrib_12+214ubuntu0.1_all.deb ...\par
+Unpacking postgresql-contrib (12+214ubuntu0.1) ...\par
+Setting up postgresql-client-common (214ubuntu0.1) ...\par
+Setting up libpq5:amd64 (12.5-0ubuntu0.20.04.1) ...\par
+Setting up libllvm10:amd64 (1:10.0.0-4ubuntu1) ...\par
+Setting up postgresql-client-12 (12.5-0ubuntu0.20.04.1) ...\par
+update-alternatives: using /usr/share/postgresql/12/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode\par
+Setting up ssl-cert (1.0.39) ...\par
+Setting up postgresql-common (214ubuntu0.1) ...\par
+Adding user postgres to group ssl-cert\par
+\par
+Creating config file /etc/postgresql-common/createcluster.conf with new version\par
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...\par
+Removing obsolete dictionary files:\par
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service \u8594? /lib/systemd/system/postgresql.service.\par
+Setting up postgresql-12 (12.5-0ubuntu0.20.04.1) ...\par
+Creating new PostgreSQL cluster 12/main ...\par
+/usr/lib/postgresql/12/bin/initdb -D /var/lib/postgresql/12/main --auth-local peer --auth-host md5\par
+The files belonging to this database system will be owned by user "postgres".\par
+This user must also own the server process.\par
+\par
+The database cluster will be initialized with locale "en_US.UTF-8".\par
+The default database encoding has accordingly been set to "UTF8".\par
+The default text search configuration will be set to "english".\par
+\par
+Data page checksums are disabled.\par
+\par
+fixing permissions on existing directory /var/lib/postgresql/12/main ... ok\par
+creating subdirectories ... ok\par
+selecting dynamic shared memory implementation ... posix\par
+selecting default max_connections ... 100\par
+selecting default shared_buffers ... 128MB\par
+selecting default time zone ... Europe/Moscow\par
+creating configuration files ... ok\par
+running bootstrap script ... ok\par
+performing post-bootstrap initialization ... ok\par
+syncing data to disk ... ok\par
+\par
+Success. You can now start the database server using:\par
+\par
+    pg_ctlcluster 12 main start\par
+\par
+Ver Cluster Port Status Owner    Data directory              Log file\par
+12  main    5432 down   postgres /var/lib/postgresql/12/main /var/log/postgresql/postgresql-12-main.log\par
+update-alternatives: using /usr/share/postgresql/12/man/man1/postmaster.1.gz to provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode\par
+Setting up postgresql-contrib (12+214ubuntu0.1) ...\par
+Setting up postgresql (12+214ubuntu0.1) ...\par
+Processing triggers for systemd (245.4-4ubuntu3.4) ...\par
+Processing triggers for man-db (2.9.1-1) ...\par
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...\par
+root@80-78-247-162:~# apt install python3-venv\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+The following additional packages will be installed:\par
+  python-pip-whl python3-distutils python3-lib2to3 python3.8-venv\par
+The following NEW packages will be installed:\par
+  python-pip-whl python3-distutils python3-lib2to3 python3-venv python3.8-venv\par
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.\par
+Need to get 2,023 kB of archives.\par
+After this operation, 4,452 kB of additional disk space will be used.\par
+Do you want to continue? [Y/n] Y\par
+Get:1 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.1 [1,799 kB]\par
+Get:2 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 python3-lib2to3 all 3.8.5-1~20.04.1 [75.6 kB]\par
+Get:3 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/main amd64 python3-distutils all 3.8.5-1~20.04.1 [141 kB]\par
+Get:4 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal-updates/universe amd64 python3.8-venv amd64 3.8.5-1~20.04 [5,440 B]\par
+Get:5 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe amd64 python3-venv amd64 3.8.2-0ubuntu2 [1,228 B]\par
+Fetched 2,023 kB in 0s (5,232 kB/s)\par
+Selecting previously unselected package python-pip-whl.\par
+(Reading database ... 59121 files and directories currently installed.)\par
+Preparing to unpack .../python-pip-whl_20.0.2-5ubuntu1.1_all.deb ...\par
+Unpacking python-pip-whl (20.0.2-5ubuntu1.1) ...\par
+Selecting previously unselected package python3-lib2to3.\par
+Preparing to unpack .../python3-lib2to3_3.8.5-1~20.04.1_all.deb ...\par
+Unpacking python3-lib2to3 (3.8.5-1~20.04.1) ...\par
+Selecting previously unselected package python3-distutils.\par
+Preparing to unpack .../python3-distutils_3.8.5-1~20.04.1_all.deb ...\par
+Unpacking python3-distutils (3.8.5-1~20.04.1) ...\par
+Selecting previously unselected package python3.8-venv.\par
+Preparing to unpack .../python3.8-venv_3.8.5-1~20.04_amd64.deb ...\par
+Unpacking python3.8-venv (3.8.5-1~20.04) ...\par
+Selecting previously unselected package python3-venv.\par
+Preparing to unpack .../python3-venv_3.8.2-0ubuntu2_amd64.deb ...\par
+Unpacking python3-venv (3.8.2-0ubuntu2) ...\par
+Setting up python-pip-whl (20.0.2-5ubuntu1.1) ...\par
+Setting up python3-lib2to3 (3.8.5-1~20.04.1) ...\par
+Setting up python3-distutils (3.8.5-1~20.04.1) ...\par
+Setting up python3.8-venv (3.8.5-1~20.04) ...\par
+Setting up python3-venv (3.8.2-0ubuntu2) ...\par
+Processing triggers for man-db (2.9.1-1) ...\par
+root@80-78-247-162:~# apt install git-core\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+Note, selecting 'git' instead of 'git-core'\par
+git is already the newest version (1:2.25.1-1ubuntu3).\par
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\par
+root@80-78-247-162:~# nano /etc/postgresql/10/main/pg_hba.conf\par
+root@80-78-247-162:~# nano /etc/postgresql/12/main/pg_hba.conf\par
+root@80-78-247-162:~# systemctl restart postgresql\par
+root@80-78-247-162:~# useradd -g www-data -m django\par
+root@80-78-247-162:~# cd /home/django/\par
+root@80-78-247-162:/home/django# git clone git@github.com:DanielGB-hub/geekshop.git\par
+Cloning into 'geekshop'...\par
+The authenticity of host 'github.com (140.82.121.4)' can't be established.\par
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.\par
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes\par
+Warning: Permanently added 'github.com,140.82.121.4' (RSA) to the list of known hosts.\par
+remote: Enumerating objects: 229, done.\par
+remote: Counting objects: 100% (229/229), done.\par
+remote: Compressing objects: 100% (181/181), done.\par
+remote: Total 229 (delta 36), reused 227 (delta 34), pack-reused 0\par
+Receiving objects: 100% (229/229), 4.68 MiB | 4.13 MiB/s, done.\par
+Resolving deltas: 100% (36/36), done.\par
+root@80-78-247-162:/home/django# cd geekshop/\par
+root@80-78-247-162:/home/django/geekshop# python3 -m venv env\par
+root@80-78-247-162:/home/django/geekshop# source env/bin/activate\par
+(env) root@80-78-247-162:/home/django/geekshop# pip3 install -r requirements.txt\par
+Collecting psycopg2-binary\par
+  Downloading psycopg2_binary-2.8.6-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 3.0 MB 1.1 MB/s\par
+Collecting pillow\par
+  Downloading Pillow-8.1.0-cp38-cp38-manylinux1_x86_64.whl (2.2 MB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 2.2 MB 6.3 MB/s\par
+Collecting django\par
+  Downloading Django-3.1.6-py3-none-any.whl (7.8 MB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 7.8 MB 8.8 MB/s\par
+Collecting social_auth_app_django\par
+  Downloading social_auth_app_django-4.0.0-py3-none-any.whl (24 kB)\par
+Collecting requests\par
+  Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 61 kB 5.0 MB/s\par
+Collecting asgiref<4,>=3.2.10\par
+  Downloading asgiref-3.3.1-py3-none-any.whl (19 kB)\par
+Collecting sqlparse>=0.2.2\par
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 42 kB 1.1 MB/s\par
+Collecting pytz\par
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 510 kB 8.7 MB/s\par
+Collecting six\par
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)\par
+Collecting social-auth-core>=3.3.0\par
+  Downloading social_auth_core-4.0.3-py3-none-any.whl (328 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 328 kB 7.9 MB/s\par
+Collecting chardet<5,>=3.0.2\par
+  Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 178 kB 8.3 MB/s\par
+Collecting idna<3,>=2.5\par
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 58 kB 3.7 MB/s\par
+Collecting certifi>=2017.4.17\par
+  Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 147 kB 874 kB/s\par
+Collecting urllib3<1.27,>=1.21.1\par
+  Downloading urllib3-1.26.3-py2.py3-none-any.whl (137 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 137 kB 6.7 MB/s\par
+Collecting defusedxml>=0.5.0rc1; python_version >= "3.0"\par
+  Downloading defusedxml-0.7.0rc2-py2.py3-none-any.whl (25 kB)\par
+Collecting requests-oauthlib>=0.6.1\par
+  Downloading requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)\par
+Collecting cryptography>=1.4\par
+  Downloading cryptography-3.3.1-cp36-abi3-manylinux2010_x86_64.whl (2.6 MB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 2.6 MB 8.6 MB/s\par
+Collecting PyJWT>=2.0.0\par
+  Downloading PyJWT-2.0.1-py3-none-any.whl (15 kB)\par
+Collecting python3-openid>=3.0.10; python_version >= "3.0"\par
+  Downloading python3_openid-3.2.0-py3-none-any.whl (133 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 133 kB 6.0 MB/s\par
+Collecting oauthlib>=1.0.3\par
+  Downloading oauthlib-3.1.0-py2.py3-none-any.whl (147 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 147 kB 5.9 MB/s\par
+Collecting cffi>=1.12\par
+  Downloading cffi-1.14.4-cp38-cp38-manylinux1_x86_64.whl (411 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 411 kB 6.3 MB/s\par
+Collecting pycparser\par
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 112 kB 3.7 MB/s\par
+Installing collected packages: psycopg2-binary, pillow, asgiref, sqlparse, pytz, django, six, defusedxml, oauthlib, chardet, idna, certifi, urllib3, requests, requests-oauthlib, pycparser, cffi, cryptography, PyJWT, python3-openid, social-auth-core, social-auth-app-django\par
+Successfully installed PyJWT-2.0.1 asgiref-3.3.1 certifi-2020.12.5 cffi-1.14.4 chardet-4.0.0 cryptography-3.3.1 defusedxml-0.7.0rc2 django-3.1.6 idna-2.10 oauthlib-3.1.0 pillow-8.1.0 psycopg2-binary-2.8.6 pycparser-2.20 python3-openid-3.2.0 pytz-2021.1 requests-2.25.1 requests-oauthlib-1.3.0 six-1.15.0 social-auth-app-django-4.0.0 social-auth-core-4.0.3 sqlparse-0.4.1 urllib3-1.26.3\par
+(env) root@80-78-247-162:/home/django/geekshop# pip3 install gunicorn\par
+Collecting gunicorn\par
+  Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)\par
+     |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 77 kB 1.5 MB/s\par
+Requirement already satisfied: setuptools>=3.0 in ./env/lib/python3.8/site-packages (from gunicorn) (44.0.0)\par
+Installing collected packages: gunicorn\par
+Successfully installed gunicorn-20.0.4\par
+(env) root@80-78-247-162:/home/django/geekshop# python3 manage.py migrate\par
+/home/django/geekshop/ordersapp/views.py:132: SyntaxWarning: "is" with a literal. Did you mean "=="?\par
+  if update_fields is 'quantity' or 'product':\par
+Traceback (most recent call last):\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection\par
+    self.connect()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect\par
+    self.connection = self.get_new_connection(conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection\par
+    connection = Database.connect(**conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect\par
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\par
+psycopg2.OperationalError: FATAL:  database "geekshop" does not exist\par
+\par
+\par
+The above exception was the direct cause of the following exception:\par
+\par
+Traceback (most recent call last):\par
+  File "manage.py", line 22, in <module>\par
+    execute_from_command_line(sys.argv)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line\par
+    utility.execute()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute\par
+    self.fetch_command(subcommand).run_from_argv(self.argv)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv\par
+    self.execute(*args, **cmd_options)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute\par
+    output = self.handle(*args, **options)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped\par
+    res = handle_func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/commands/migrate.py", line 92, in handle\par
+    executor = MigrationExecutor(connection, self.migration_progress_callback)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__\par
+    self.loader = MigrationLoader(self.connection)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__\par
+    self.build_graph()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph\par
+    self.applied_migrations = recorder.applied_migrations()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations\par
+    if self.has_table():\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table\par
+    with self.connection.cursor() as cursor:\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor\par
+    return self._cursor()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor\par
+    self.ensure_connection()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection\par
+    self.connect()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__\par
+    raise dj_exc_value.with_traceback(traceback) from exc_value\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection\par
+    self.connect()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect\par
+    self.connection = self.get_new_connection(conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection\par
+    connection = Database.connect(**conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect\par
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\par
+django.db.utils.OperationalError: FATAL:  database "geekshop" does not exist\par
+\par
+(env) root@80-78-247-162:/home/django/geekshop# chown -R django /home/django/\par
+(env) root@80-78-247-162:/home/django/geekshop# chmod -R 755 /home/django/geekshop/\par
+(env) root@80-78-247-162:/home/django/geekshop# python3 manage.py migrate       Traceback (most recent call last):\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection\par
+    self.connect()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect\par
+    self.connection = self.get_new_connection(conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection\par
+    connection = Database.connect(**conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect\par
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\par
+psycopg2.OperationalError: FATAL:  database "geekshop" does not exist\par
+\par
+\par
+The above exception was the direct cause of the following exception:\par
+\par
+Traceback (most recent call last):\par
+  File "manage.py", line 22, in <module>\par
+    execute_from_command_line(sys.argv)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line\par
+    utility.execute()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute\par
+    self.fetch_command(subcommand).run_from_argv(self.argv)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv\par
+    self.execute(*args, **cmd_options)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute\par
+    output = self.handle(*args, **options)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped\par
+    res = handle_func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/core/management/commands/migrate.py", line 92, in handle\par
+    executor = MigrationExecutor(connection, self.migration_progress_callback)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__\par
+    self.loader = MigrationLoader(self.connection)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__\par
+    self.build_graph()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph\par
+    self.applied_migrations = recorder.applied_migrations()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations\par
+    if self.has_table():\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table\par
+    with self.connection.cursor() as cursor:\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor\par
+    return self._cursor()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor\par
+    self.ensure_connection()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection\par
+    self.connect()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__\par
+    raise dj_exc_value.with_traceback(traceback) from exc_value\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection\par
+    self.connect()\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect\par
+    self.connection = self.get_new_connection(conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner\par
+    return func(*args, **kwargs)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection\par
+    connection = Database.connect(**conn_params)\par
+  File "/home/django/geekshop/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect\par
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\par
+django.db.utils.OperationalError: FATAL:  database "geekshop" does not exist\par
+\par
+(env) root@80-78-247-162:/home/django/geekshop# psql -U postgres\par
+psql (12.5 (Ubuntu 12.5-0ubuntu0.20.04.1))\par
+Type "help" for help.\par
+\par
+postgres=# \\l\par
+postgres=# create database geekshop;\par
+CREATE DATABASE\par
+postgres=# \\q\par
+(env) root@80-78-247-162:/home/django/geekshop# python3 manage.py migrate\par
+Operations to perform:\par
+  Apply all migrations: admin, auth, authapp, basketapp, contenttypes, mainapp, ordersapp, sessions, social_django\par
+Running migrations:\par
+  Applying contenttypes.0001_initial... OK\par
+  Applying contenttypes.0002_remove_content_type_name... OK\par
+  Applying auth.0001_initial... OK\par
+  Applying auth.0002_alter_permission_name_max_length... OK\par
+  Applying auth.0003_alter_user_email_max_length... OK\par
+  Applying auth.0004_alter_user_username_opts... OK\par
+  Applying auth.0005_alter_user_last_login_null... OK\par
+  Applying auth.0006_require_contenttypes_0002... OK\par
+  Applying auth.0007_alter_validators_add_error_messages... OK\par
+  Applying auth.0008_alter_user_username_max_length... OK\par
+  Applying authapp.0001_initial... OK\par
+  Applying admin.0001_initial... OK\par
+  Applying admin.0002_logentry_remove_auto_add... OK\par
+  Applying admin.0003_logentry_add_action_flag_choices... OK\par
+  Applying auth.0009_alter_user_last_name_max_length... OK\par
+  Applying auth.0010_alter_group_name_max_length... OK\par
+  Applying auth.0011_update_proxy_permissions... OK\par
+  Applying auth.0012_alter_user_first_name_max_length... OK\par
+  Applying authapp.0002_auto_20210124_2054... OK\par
+  Applying authapp.0003_auto_20210125_1515... OK\par
+  Applying authapp.0004_auto_20210125_1633... OK\par
+  Applying authapp.0005_auto_20210125_1746... OK\par
+  Applying authapp.0006_auto_20210125_1831... OK\par
+  Applying authapp.0007_auto_20210126_1700... OK\par
+  Applying authapp.0008_auto_20210126_2103... OK\par
+  Applying authapp.0009_auto_20210126_2136... OK\par
+  Applying authapp.0010_auto_20210126_2256... OK\par
+  Applying mainapp.0001_initial... OK\par
+  Applying basketapp.0001_initial... OK\par
+  Applying mainapp.0002_productcategory_is_active... OK\par
+  Applying mainapp.0003_product_is_active... OK\par
+  Applying ordersapp.0001_initial... OK\par
+  Applying sessions.0001_initial... OK\par
+  Applying social_django.0001_initial... OK\par
+  Applying social_django.0002_add_related_name... OK\par
+  Applying social_django.0003_alter_email_max_length... OK\par
+  Applying social_django.0004_auto_20160423_0400... OK\par
+  Applying social_django.0005_auto_20160727_2333... OK\par
+  Applying social_django.0006_partial... OK\par
+  Applying social_django.0007_code_timestamp... OK\par
+  Applying social_django.0008_partial_timestamp... OK\par
+  Applying social_django.0009_auto_20191118_0520... OK\par
+  Applying social_django.0010_uid_db_index... OK\par
+(env) root@80-78-247-162:/home/django/geekshop# python3 manage.py fill_db\par
+(env) root@80-78-247-162:/home/django/geekshop# python3 manage.py runserver\par
+Performing system checks...\par
+\par
+System check identified no issues (0 silenced).\par
+February 06, 2021 - 00:40:24\par
+Django version 3.1.6, using settings 'geekshop.settings'\par
+Starting development server at {\field{\*\fldinst{HYPERLINK "http://127.0.0.1:8000/"}}{\fldrslt{\ul\cf1 http://127.0.0.1:8000/}}}\f0\fs22\par
+Quit the server with CONTROL-C.\par
+^C(env) root@80-78-247-162:/home/django/geekshop# chown -R django /home/django/\par
+(env) root@80-78-247-162:/home/django/geekshop# chmod -R 755 /home/django/geekshop/\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo nano /etc/systemd/system/gunicorn.service\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo systemctl enable gunicorn\par
+Created symlink /etc/systemd/system/multi-user.target.wants/gunicorn.service \u8594? /etc/systemd/system/gunicorn.service.\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo systemctl start gunicorn\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo systemctl status gunicorn\par
+\u9679? gunicorn.service - gunicorn daemon\par
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor pres>\par
+     Active: active (running) since Fri 2021-02-05 22:42:55 MSK; 7s ago\par
+   Main PID: 4214 (gunicorn)\par
+      Tasks: 4 (limit: 1158)\par
+     Memory: 106.8M\par
+     CGroup: /system.slice/gunicorn.service\par
+             \u9500?\u9472?4214 /home/django/geekshop/env/bin/python3 /home/django/geekshop>\par
+             \u9500?\u9472?4226 /home/django/geekshop/env/bin/python3 /home/django/geekshop>\par
+             \u9500?\u9472?4227 /home/django/geekshop/env/bin/python3 /home/django/geekshop>\par
+             \u9492?\u9472?4228 /home/django/geekshop/env/bin/python3 /home/django/geekshop>\par
+\par
+Feb 05 22:42:55 80-78-247-162.cloudvps.regruhosting.ru systemd[1]: Started guni>\par
+Feb 05 22:42:56 80-78-247-162.cloudvps.regruhosting.ru gunicorn[4214]: [2021-02>\par
+Feb 05 22:42:56 80-78-247-162.cloudvps.regruhosting.ru gunicorn[4214]: [2021-02>\par
+Feb 05 22:42:56 80-78-247-162.cloudvps.regruhosting.ru gunicorn[4214]: [2021-02>\par
+Feb 05 22:42:56 80-78-247-162.cloudvps.regruhosting.ru gunicorn[4226]: [2021-02>\par
+Feb 05 22:42:56 80-78-247-162.cloudvps.regruhosting.ru gunicorn[4227]: [2021-02>\par
+Feb 05 22:42:56 80-78-247-162.cloudvps.regruhosting.ru gunicorn[4228]: [2021-02>\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo nano /etc/nginx/sites-available/geekshop\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo nginx -t\par
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\par
+nginx: configuration file /etc/nginx/nginx.conf test is successful\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo systemctl restart nginx\par
+(env) root@80-78-247-162:/home/django/geekshop# sudo systemctl status nginx\par
+\u9679? nginx.service - A high performance web server and a reverse proxy server\par
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>\par
+     Active: active (running) since Fri 2021-02-05 22:44:42 MSK; 16s ago\par
+       Docs: man:nginx(8)\par
+    Process: 4247 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_proce>\par
+    Process: 4259 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (c>\par
+   Main PID: 4260 (nginx)\par
+      Tasks: 2 (limit: 1158)\par
+     Memory: 2.6M\par
+     CGroup: /system.slice/nginx.service\par
+             \u9500?\u9472?4260 nginx: master process /usr/sbin/nginx -g daemon on; master_>\par
+             \u9492?\u9472?4261 nginx: worker process\par
+\par
+Feb 05 22:44:42 80-78-247-162.cloudvps.regruhosting.ru systemd[1]: Starting A h>\par
+Feb 05 22:44:42 80-78-247-162.cloudvps.regruhosting.ru systemd[1]: Started A hi>\par
+(env) root@80-78-247-162:/home/django/geekshop# apt install mc\par
+Reading package lists... Done\par
+Building dependency tree\par
+Reading state information... Done\par
+The following additional packages will be installed:\par
+  libssh2-1 mc-data\par
+Suggested packages:\par
+  arj catdvi | texlive-binaries dbview djvulibre-bin epub-utils genisoimage gv\par
+  imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python\par
+  python-boto python-tz xpdf | pdf-viewer zip\par
+Recommended packages:\par
+  unzip\par
+The following NEW packages will be installed:\par
+  libssh2-1 mc mc-data\par
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.\par
+Need to get 1,817 kB of archives.\par
+After this operation, 7,994 kB of additional disk space will be used.\par
+Do you want to continue? [Y/n] Y\par
+Get:1 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe amd64 libssh2-1 amd64 1.8.0-2.1build1 [75.4 kB]\par
+Get:2 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe amd64 mc-data all 3:4.8.24-2ubuntu1 [1,265 kB]\par
+Get:3 {\field{\*\fldinst{HYPERLINK "http://ru.archive.ubuntu.com/ubuntu"}}{\fldrslt{\ul\cf1 http://ru.archive.ubuntu.com/ubuntu}}}\f0\fs22  focal/universe amd64 mc amd64 3:4.8.24-2ubuntu1 [477 kB]\par
+Fetched 1,817 kB in 0s (7,178 kB/s)\par
+Selecting previously unselected package libssh2-1:amd64.\par
+(Reading database ... 59431 files and directories currently installed.)\par
+Preparing to unpack .../libssh2-1_1.8.0-2.1build1_amd64.deb ...\par
+Unpacking libssh2-1:amd64 (1.8.0-2.1build1) ...\par
+Selecting previously unselected package mc-data.\par
+Preparing to unpack .../mc-data_3%3a4.8.24-2ubuntu1_all.deb ...\par
+Unpacking mc-data (3:4.8.24-2ubuntu1) ...\par
+Selecting previously unselected package mc.\par
+Preparing to unpack .../mc_3%3a4.8.24-2ubuntu1_amd64.deb ...\par
+Unpacking mc (3:4.8.24-2ubuntu1) ...\par
+Setting up mc-data (3:4.8.24-2ubuntu1) ...\par
+Setting up libssh2-1:amd64 (1.8.0-2.1build1) ...\par
+Setting up mc (3:4.8.24-2ubuntu1) ...\par
+Processing triggers for man-db (2.9.1-1) ...\par
+Processing triggers for mime-support (3.64ubuntu1) ...\par
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...\par
+(env) root@80-78-247-162:/home/django/geekshop# history > hist.txt\par
+(env) root@80-78-247-162:/home/django/geekshop# cat hist.txt\par
+    1  mkdir .ssh\par
+    2  chmod 700 .ssh\par
+    3  echo ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA4h7hV+Sh6qwzpHbGZ3DGomaiiRP6vFZMziZsF31BtFr6MQp5pnSpAspOM8ftYnEcKGD2g+yt6mxU9+xc2VUoPkHFR/M6OXFRU9wOck5uszmi2ocZfhLTe3lsUNIYYX7wACUfvd5+iOdV9JX6mTIDYznXedFUAH7nxPDE3n+nJWlFhEm6v1rZKTxiXt1LDFX4UiaAClVOCFVK9V9Y9I2bXLWP8wY27yelvbuK03sidtv1nauEiTSzHIxd55S4wBm0d1UwH+l666IFWSp1c5Bz3fYOXGpLF2JghRmnu6NZ4/fR19dAIjIdQfJBTI2+WPZqOHkXQ/9nLqSeqDFTwzO/hQ== rsa-key-20210205 >> authorized_keys\par
+    4  cd .ssh\par
+    5  echo\par
+    6  echo ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA4h7hV+Sh6qwzpHbGZ3DGomaiiRP6vFZMziZsF31BtFr6MQp5pnSpAspOM8ftYnEcKGD2g+yt6mxU9+xc2VUoPkHFR/M6OXFRU9wOck5uszmi2ocZfhLTe3lsUNIYYX7wACUfvd5+iOdV9JX6mTIDYznXedFUAH7nxPDE3n+nJWlFhEm6v1rZKTxiXt1LDFX4UiaAClVOCFVK9V9Y9I2bXLWP8wY27yelvbuK03sidtv1nauEiTSzHIxd55S4wBm0d1UwH+l666IFWSp1c5Bz3fYOXGpLF2JghRmnu6NZ4/fR19dAIjIdQfJBTI2+WPZqOHkXQ/9nLqSeqDFTwzO/hQ== rsa-key-20210205 >> authorized_keys\par
+    7  ssh-keygen\par
+    8  cat /root/.ssh/id_rsa.pub\par
+    9  apt update\par
+   10  apt install nginx\par
+   11  apt install postgresql postgresql-contrib\par
+   12  apt install python3-venv\par
+   13  apt install git-core\par
+   14  nano /etc/postgresql/10/main/pg_hba.conf\par
+   15  nano /etc/postgresql/12/main/pg_hba.conf\par
+   16  systemctl restart postgresql\par
+   17  useradd -g www-data -m django\par
+   18  cd /home/django/\par
+   19  git clone git@github.com:DanielGB-hub/geekshop.git\par
+   20  cd geekshop/\par
+   21  python3 -m venv env\par
+   22  source env/bin/activate\par
+   23  pip3 install -r requirements.txt\par
+   24  pip3 install gunicorn\par
+   25  python3 manage.py migrate\par
+   26  chown -R django /home/django/\par
+   27  chmod -R 755 /home/django/geekshop/\par
+   28  python3 manage.py migrate\par
+   29  psql -U postgres\par
+   30  python3 manage.py migrate\par
+   31  python3 manage.py fill_db\par
+   32  python3 manage.py runserver\par
+   33  chown -R django /home/django/\par
+   34  chmod -R 755 /home/django/geekshop/\par
+   35  sudo nano /etc/systemd/system/gunicorn.service\par
+   36  sudo systemctl enable gunicorn\par
+   37  sudo systemctl start gunicorn\par
+   38  sudo systemctl status gunicorn\par
+   39  sudo nano /etc/nginx/sites-available/geekshop\par
+   40  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled\par
+   41  sudo nginx -t\par
+   42  sudo systemctl restart nginx\par
+   43  sudo systemctl status nginx\par
+   44  apt install mc\par
+   45  history > hist.txt\par
+\b\fs40 ip: 80.78.247.162\b0\fs22\par
+}
+ 
