@@ -1,5 +1,5 @@
-.idea
-db.sqlite3
-run.bat
+#.idea
+#db.sqlite3
+#geekshop/vk.json
 __pycache__/
-/media/
+tmp/
