@@ -1,2 +1,8 @@
-django==2.2.17
-Pillow==8.0.1
+psycopg2-binary
+pillow
+django
+social_auth_app_django
+requests
+wheel
+django-debug-toolbar
+django-debug-toolbar-template-profiler
